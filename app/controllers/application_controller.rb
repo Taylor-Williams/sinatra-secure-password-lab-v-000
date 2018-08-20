@@ -41,7 +41,7 @@ class ApplicationController < Sinatra::Base
     ##your code here
     user = User.find_by(username: params[:username], password: params[:password])
     if user
-      session[:id] = user[:id]
+      session[:id] = user.id
     else
       redirect '/failure'
     end
