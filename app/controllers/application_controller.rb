@@ -47,6 +47,7 @@ class ApplicationController < Sinatra::Base
       else
         redirect '/failure'
       end
+    else
       redirect '/failure'
     end
   end
